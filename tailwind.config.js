@@ -6,17 +6,30 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        'grayscaleToNormal': 'grayscaleToNormal 1s forwards',
+        'pulse-slow': 'pulse 3s infinite',
+        'bounce-slow': 'bounce 2s infinite',
+        'spin-slow': 'spin 8s linear infinite',
+      },
       keyframes: {
         grayscaleToNormal: {
-          '0%, 100%': { filter: 'grayscale(100%)' },
-          '50%': { filter: 'grayscale(0%)' },
+          '0%': { filter: 'grayscale(100%)' },
+          '100%': { filter: 'grayscale(0%)' },
         },
       },
-      animation: {
-        grayscaleToNormal: 'grayscaleToNormal 3s ease-in-out infinite',
-      }
+      fontFamily: {
+        'jost': ['Jost', 'sans-serif'],
+      },
+      transitionTimingFunction: {
+        'bounce-in-out': 'cubic-bezier(0.68, -0.55, 0.27, 1.55)',
+      },
+      boxShadow: {
+        'inner-lg': 'inset 0 2px 10px 0 rgb(0 0 0 / 0.15)',
+      },
     },
   },
   plugins: [],
 }
+
 
